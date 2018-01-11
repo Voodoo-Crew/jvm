@@ -1,31 +1,31 @@
 {
-  "name": "jvm",
-  "authors": [
+  "name": "jvm"
+, "authors": [
     "Baltrushaitis Tomas <tbaltrushaitis@gmail.com>"
-  ],
-  "description": "JVectorMap implementation of heatmap",
-  "main": "index.html",
-  "keywords": [
-    "jvm",
-    "heatmap"
-  ],
-  "license": "MIT",
-  "homepage": "",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "jvectormap": "^2.0.4",
-    "jvectormap-maps": "*",
-    "bootstrap": "3.3.7",
-    "jquery": "^3.2.1",
-    "jquery-mousewheel": "^3.1.13",
-    "jquery-ui": "^1.12.1",
-    "underscore": "^1.8.3",
+  ]
+, "description": "JVectorMap implementation of heatmap"
+, "main": "index.html"
+, "keywords": [
+      "jvm"
+    , "heatmap"
+  ]
+, "license": "MIT"
+, "homepage": "http://bit.ly/map-jvm"
+, "private": true
+, "ignore": [
+      "**/.*"
+    , "node_modules"
+    , "bower_modules"
+    , "test"
+    , "tests"
+  ]
+, "dependencies": {
+      "jvectormap": "^2.0.4"
+    , "jvectormap-maps": "*"
+    , "bootstrap": "3.3.7"
+    , "jquery": "^3.2.1"
+    , "jquery-mousewheel": "^3.1.13"
+    , "jquery-ui": "^1.12.1"
+    , "underscore": "^1.8.3"
   }
 }

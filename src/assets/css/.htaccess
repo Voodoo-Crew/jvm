@@ -4,6 +4,6 @@ AddDefaultCharset utf-8
 Options All -Indexes
 
 <FilesMatch "\.(htaccess|htpasswd|log|sh|pl)$">
-    Order Allow,Deny
-    Deny from all
+  Order Allow,Deny
+  Deny from all
 </FilesMatch>

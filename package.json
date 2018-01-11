@@ -1,0 +1,132 @@
+{   "name":     "jvm"
+  , "version":  "0.0.1"
+  , "title":    "Maps visualizations built with jVectorMap"
+  , "description": "Examples of Maps built with jVectorMap"
+  , "homepage": "https://github.com/Voodoo-Crew/jvm"
+  , "bugs":     "https://github.com/Voodoo-Crew/jvm/issues"
+  , "license":  "MIT"
+  , "author": {
+        "name":  "Tomas B."
+      , "email": "tbaltrushaitis@gmail.com"
+      , "url":   "https://github.com/tbaltrushaitis"
+    }
+  , "private":  false
+  , "website":  "http://bit.ly/map-jvm"
+  , "readmeFilename": "README.md"
+  , "engines": {
+      "node": ">=6.9.1"
+    }
+  , "os":  ["linux"]
+  , "main": "gulpfile.js"
+  , "scripts": {
+        "preinstall": "npm i -g versionn"
+      , "start":    "./setup.sh"
+      , "all":      "./setup.sh all"
+      , "dev":      "gulp --env=dev"
+      , "prod":     "gulp --env=production"
+      , "watch":    "gulp watch"
+    }
+  , "repository": {
+        "type": "git"
+      , "url":  "git+https://github.com/Voodoo-Crew/jvm.git"
+    }
+  , "keywords": [
+        "jvm"
+      , "heatmap"
+    ]
+  , "dependencies": {
+    }
+  , "devDependencies": {
+        "bower":                "^1.8.2"
+      , "lodash":               "^4.17.4"
+      , "main-bower-files":     "^2.13.1"
+      , "nconf":                "^0.9.1"
+      , "read-config":          "^2.0.0"
+    }
+  , "outdatedDependencies": {
+    }
+  , "options": {
+      "bower": {
+          "debugging": true
+        , "paths": {
+              "bowerDirectory":   "bower_modules"
+            , "bowerrc":          ".bowerrc"
+            , "bowerJson":        "bower.json"
+          }
+      }
+    , "clean": {
+        "debug":            true
+      , "processImport":    true
+      }
+    , "exec": {
+          "continueOnError":  false
+        , "pipeStdout":       false
+      }
+    , "file": {
+          "encoding": "utf8"
+        , "flag":     "r"
+      }
+    , "minify": {
+        "suffix": ".min"
+      }
+    , "reporting": {
+          "err":    true
+        , "stderr": true
+        , "stdout": true
+      }
+    , "sync": {
+        "printSummary": true
+      , "nodelete":     true
+      }
+    , "uglify": {
+        "compress": {
+            "sequences":        true
+          , "properties":       true
+          , "dead_code":        true
+          , "drop_debugger":    true
+          , "unsafe":           false
+          , "conditionals":     true
+          , "comparisons":      true
+          , "evaluate":         true
+          , "booleans":         true
+          , "loops":            true
+          , "unused":           true
+          , "hoist_funs":       true
+          , "hoist_vars":       false
+          , "if_return":        true
+          , "join_vars":        true
+          , "cascade":          true
+          , "side_effects":     true
+          , "warnings":         true
+          , "global_defs":      {}
+        }
+      , "mangle":   false
+      , "output": {
+            "indent_start":     0
+          , "indent_level":     4
+          , "quote_keys":       false
+          , "ascii_only":       false
+          , "inline_script":    false
+          , "width":            80
+          , "max_line_len":     32000
+          , "beautify":         false
+          , "source_map":       null
+          , "bracketize":       false
+          , "comments":         false
+          , "semicolons":       true
+        }
+      }
+    , "watch": {
+        "ignoreInitial":    false
+      , "verbose":          true
+      , "readDelay":        100
+      }
+    , "iopts": {
+          "showHidden": false
+        , "depth":      4
+        , "colors":     true
+      }
+    }
+  , "jshintConfig": {
+    }
+}
