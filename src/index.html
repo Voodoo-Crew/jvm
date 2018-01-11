@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if IE 9 ]><html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" class="ie9"> <![endif]-->
+<!--[if IE 10 ]><html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" class="ie10"> <![endif]-->
+<!--[if IE 11 ]><html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" class="ie11"> <![endif]-->
+<!--[if (gt IE 11)|!(IE)]><!--><html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" class="noie"> <!--<![endif]-->
+<head>
+    <!--/ Basic Page Needs
+    ================================================== /-->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible"  content="IE=edge, chrome=1" />
+    <meta http-equiv="Content-Type"     content="text/html; charset=utf-8" />
+
+    <title>Maps :: jVectorMap</title>
+
+    <!--/ Metas
+    ================================================== /-->
+    <meta name="title"          content="meta_title" />
+    <meta name="description"    content="meta_description" />
+    <meta name="keywords"       content="meta_keywords" />
+    <meta name="author"         content="meta_author" />
+    <meta name="language"       content="en" />
+    <meta name="robots"         content="index, nofollow, noarchive" />
+    <meta name="revisit-after"  content="15 days" />
+
+    <!--/ Styles
+    ================================================== /-->
+    <link rel="stylesheet" href="assets/css/jquery-jvectormap.css" media="all" id="css-jvectormap" />
+    <!--/ BOOTSTRAP STYLE SHEET /-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="all" id="css-bootstrap" />
+    <!--/ Custom /-->
+    <link rel="stylesheet" href="assets/css/custom.css" media="all" id="css-custom" />
+
+    <!--/ Favicon
+    ================================================== /-->
+    <link href="assets/img/favicon.ico" type="image/x-icon" rel="icon" />
+    <link href="assets/img/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+
+</head>
+
+<body>
+
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="container-map-ukraine" class="center"></div>
+          <input type="button" value="Reset regions" class="btn btn-primary btn-clear-regions hide" />
+        </div>
+        <div class="col-md-6">
+          <div id="container-map-world" class="center"></div>
+          <input type="button" value="Reset regions" class="btn btn-primary btn-clear-regions hide" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content hide">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="container-map-world-0" class="center"></div>
+          <input type="button" value="Reset regions" class="btn btn-primary btn-clear-regions hide" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="assets/js/lib/jquery.min.js"></script>
+  <script src="assets/js/lib/underscore-min.js"></script>
+
+  <script src="assets/js/lib/jquery-jvectormap.min.js"></script>
+  <!-- <script src="assets/js/lib/jquery.jvectormap.min.js"></script> -->
+  <script src="assets/js/lib/jquery-mousewheel.js"></script>
+
+  <script src="assets/js/lib/jvectormap/jvectormap.js"></script>
+
+  <script src="assets/js/lib/jvectormap/abstract-element.js"></script>
+  <script src="assets/js/lib/jvectormap/abstract-canvas-element.js"></script>
+  <script src="assets/js/lib/jvectormap/abstract-shape-element.js"></script>
+
+  <script src="assets/js/lib/jvectormap/svg-element.js"></script>
+  <script src="assets/js/lib/jvectormap/svg-group-element.js"></script>
+  <script src="assets/js/lib/jvectormap/svg-canvas-element.js"></script>
+  <script src="assets/js/lib/jvectormap/svg-shape-element.js"></script>
+  <script src="assets/js/lib/jvectormap/svg-path-element.js"></script>
+  <script src="assets/js/lib/jvectormap/svg-circle-element.js"></script>
+
+  <script src="assets/js/lib/jvectormap/vml-element.js"></script>
+  <script src="assets/js/lib/jvectormap/vml-group-element.js"></script>
+  <script src="assets/js/lib/jvectormap/vml-canvas-element.js"></script>
+  <script src="assets/js/lib/jvectormap/vml-shape-element.js"></script>
+  <script src="assets/js/lib/jvectormap/vml-path-element.js"></script>
+  <script src="assets/js/lib/jvectormap/vml-circle-element.js"></script>
+
+  <script src="assets/js/lib/jvectormap/simple-scale.js"></script>
+  <script src="assets/js/lib/jvectormap/numeric-scale.js"></script>
+  <script src="assets/js/lib/jvectormap/ordinal-scale.js"></script>
+  <script src="assets/js/lib/jvectormap/color-scale.js"></script>
+  <script src="assets/js/lib/jvectormap/data-series.js"></script>
+
+  <script src="assets/js/lib/jvectormap/proj.js"></script>
+
+  <script src="assets/js/lib/jvectormap/vector-canvas.js"></script>
+  <script src="assets/js/lib/jvectormap/world-map.js"></script>
+
+  <script src="data/ukraine-mill-ru.js"></script>
+  <script src="data/world-mill-en.js"></script>
+
+  <!-- <script src="data/jquery-jvectormap-map.js"></script> -->
+  <script src="assets/js/app/build.map.js"></script>
+
+  <script>
+    // _.mixin(_.str.exports());
+    loadMap('data/maps/ukraine-ru.json', $('#container-map-ukraine'));
+
+    var opts = {
+        container:  $('#container-map-world')
+      , map:        'world_mill_en'
+    };
+    buildMap(opts, {});
+
+  </script>
+
+</body>
+</html>
